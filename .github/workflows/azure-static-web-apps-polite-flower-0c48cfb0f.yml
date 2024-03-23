@@ -22,8 +22,8 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: "20.11"
-          cache: "npm"
+          node-version: 20.11
+          cache: npm
       - name: Install
         run: npm ci
       - name: Build And Deploy
