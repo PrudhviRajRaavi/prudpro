@@ -5,9 +5,12 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 import { environment } from './environments/environment';
 import { AppComponent } from './app/app.component';
+import { injectSpeedInsights } from '@vercel/speed-insights';
+
 
 if (environment.production) {
   enableProdMode();
+  injectSpeedInsights();
 }
 bootstrapApplication(AppComponent, appConfig)
   .catch((err) => console.error(err));
