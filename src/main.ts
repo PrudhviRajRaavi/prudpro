@@ -10,7 +10,9 @@ import { injectSpeedInsights } from '@vercel/speed-insights';
 
 if (environment.production) {
   enableProdMode();
-  injectSpeedInsights();
+  
 }
-bootstrapApplication(AppComponent, appConfig)
+bootstrapApplication(AppComponent, appConfig).then(()=>{
+  injectSpeedInsights();
+})
   .catch((err) => console.error(err));
