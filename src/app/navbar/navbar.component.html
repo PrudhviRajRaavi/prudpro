@@ -220,4 +220,95 @@
       </div>
     </div>
   </div>
+  <!-- Add this section after the "About Me" div in the existing HTML -->
+  <div class="bg-gray-700 p-12 pt-12">
+    <div class="mx-auto max-w-6xl">
+      <h1 class="text-6xl !font-black text-white text-center">Contact Me</h1>
+      <div class="flex flex-col items-center mt-4">
+        <p class="text-lg text-white text-center">
+          Feel free to reach out to me for any potential opportunities or
+          collaborations.
+        </p>
+      </div>
+
+      <form class="mt-8 space-y-6" (ngSubmit)="onSubmit()">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2">
+          <div>
+            <label for="name" class="block text-sm font-medium text-white"
+              >Name</label
+            >
+            <input
+              type="text"
+              id="name"
+              name="name"
+              [(ngModel)]="contactForm.name"
+              required
+              class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 py-3 px-4 text-base"
+            />
+          </div>
+          <div>
+            <label for="email" class="block text-sm font-medium text-white"
+              >Email</label
+            >
+            <input
+              type="email"
+              id="email"
+              name="email"
+              [(ngModel)]="contactForm.email"
+              required
+              class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 py-3 px-4 text-base"
+            />
+          </div>
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-medium text-white"
+            >Message</label
+          >
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            [(ngModel)]="contactForm.message"
+            required
+            class="mt-1 block w-full rounded-md bg-gray-800 border-gray-700 text-white shadow-sm focus:border-blue-500 focus:ring focus:ring-blue-500 focus:ring-opacity-50 py-3 px-4 text-base"
+          ></textarea>
+        </div>
+        <div class="text-center">
+          <button
+            type="submit"
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded transition duration-300 ease-in-out transform hover:scale-105"
+          >
+            Send Message
+          </button>
+        </div>
+      </form>
+
+      <div class="mt-8 text-center">
+        <div class="flex justify-center space-x-4">
+          <a
+            href="#"
+            class="text-white hover:text-blue-500 transition duration-300"
+          >
+            <img
+              src="../../assets/icons/linkedin.svg"
+              class="w-8"
+              alt="LinkedIn"
+            />
+          </a>
+          <a
+            href="#"
+            class="text-white hover:text-blue-500 transition duration-300"
+          >
+            <img src="../../assets/icons/github.svg" class="w-8" alt="GitHub" />
+          </a>
+          <a
+            href="#"
+            class="text-white hover:text-blue-500 transition duration-300"
+          >
+            <img src="../../assets/icons/email.svg" class="w-8" alt="Email" />
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
